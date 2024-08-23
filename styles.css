@@ -1,1 +1,44 @@
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mobile-view {
+    display: block;  /* Display by default */
+}
+
+.desktop-view {
+    display: none;  /* Hide by default */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.desktop-view th, .desktop-view td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.day {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+    .mobile-view {
+        display: none;  /* Hide mobile view on larger screens */
+    }
+
+    .desktop-view {
+        display: table;  /* Show desktop view on larger screens */
+    }
+}
